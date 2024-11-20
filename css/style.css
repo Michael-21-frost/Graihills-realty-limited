@@ -1,0 +1,585 @@
+/***
+GRAIGHILLS INTEGRATED SERVICES LIMITED (GIS)
+8th September, 2024
+All rights reserved.
+Stylesheets for single paged website
+Developer | Michael Otote CEO OTOTECH INDUSTRIES
+
+***/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+ 
+html{
+ -webkit-touch-callout: none;
+ -webkit-text-size-adjust: none;
+ -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+
+}
+html,body{
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #AA9123 #f1f1f1; /* thumb and track colors */
+    
+  
+}
+:root {
+    --primary: #AA9123;
+    --secondary: #2e3135;
+    --secondary-light: #2e3135;
+    --light: #F8F9FA;
+    --dark: #182333;
+    --variant:#CCAD2B;
+}
+.custom-icon {
+    font-size: 1.5rem; /* Adjust this value to make icons bigger */
+}
+p, ol, ul, span{
+    color: var(--secondary);
+    opacity: 0.9 !important;
+   
+    
+}
+h1, h2, h3, h4, h5, h6{
+    opacity: 0.9!important;
+}
+/* a:active{
+    color: var(--primary);
+} */
+a:hover{
+    color: var(--light);
+}
+.m-0{
+    font-size: 19px;
+}
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+    border-radius:5px;
+}
+
+.btn.btn-primary,
+.btn.btn-outline-primary:hover {
+    color: #FFFFFF !important;
+}
+.btn.btn-primary{
+    color: white;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+nav{
+    opacity: 0.93;
+    position: fixed;
+    
+    
+}
+.navbar.sticky-top {
+
+    transition: .5s;
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: none;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-left: 30px;
+    padding: 20px 0;
+    color: var(--secondary);
+    font-weight: 200;
+    text-transform: uppercase;
+    outline: none;
+    font-size: 14px;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+/* Dropdown full width under services */
+.custom-dropdown {
+    width: 30vw; /* Full viewport width */
+    background-color: white; /* White background */
+    left: 0; /* Align dropdown to start at the left edge */
+    right: 0; /* Ensure it stretches to the right edge */
+    margin-top: 1; /* Ensure it aligns right under the Services link */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border-radius for full width */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.699); /* Add shadow for better visibility */
+    padding: 0; /* No extra padding */
+    z-index: 1000; /* Make sure it stays on top */
+    opacity: 1;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 10px 10px; /* Add padding for dropdown items */
+}
+
+.nav-item.dropdown:hover .custom-dropdown {
+    display: block;
+    opacity: 100%;
+}
+
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Adjust as needed */
+}
+
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: contain;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #999999;
+}
+
+
+/*** Facts ***/
+.facts-overlay {
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, .65);
+}
+
+.facts-overlay h1 {
+    font-size: 120px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary);
+   
+}
+
+.facts-overlay a:hover {
+    color: var(--primary) !important;
+}
+
+/* Make all the fact sections have equal height */
+.d-flex {
+    display: flex;
+    align-items:center; /* Ensures that all items are stretched to the same height */
+}
+
+.position-relative {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.facts-overlay {
+    flex-grow: 1; /* Ensures the overlay content grows to fill the remaining space */
+}
+.facts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ensures background is semi-transparent */
+    display: flex;
+    flex-direction: column;
+  
+    z-index: 1; /* Ensures overlay content stays above the image */
+}
+
+.facts-overlay h4, .facts-overlay p, .facts-overlay a {
+    z-index: 2; /* Keeps text and button above any hover effects */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.facts-overlay a:hover {
+    color: #fff !important; /* Ensure button text remains white on hover */
+    /* Optional: change button background on hover */
+    text-decoration: none; /* Prevent underline on hover */
+}
+.custom-height {
+    height: 400px; /* Adjust to your preferred height */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.custom-height img {
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits within the container */
+}
+
+
+
+/* For smaller screens (mobile), you can adjust the height */
+@media (max-width: 768px) {
+    .position-relative {
+        min-height: 300px; /* Adjust for mobile as necessary */
+    }
+}
+
+  /* Default for larger screens (desktop) */
+  #responsive-box {
+    width: 250px; /* Desktop size */
+    height: 250px; /* Desktop size */
+  }
+  
+  #responsive-content h1 {
+    font-size: 40px; /* Large number size */
+  }
+  
+  #responsive-content h2 {
+    font-size: 24px; /* Large "Years" text */
+  }
+  
+  #responsive-content h5 {
+    font-size: 18px; /* Large "Experience" text */
+  }
+
+
+
+/*** Service ***/
+.service-text::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: var(--primary);
+    opacity: 0;
+    transition: .5s;
+}
+
+.service-item:hover .service-text::before {
+    height: 100%;
+    opacity: 1;
+}
+
+.service-text * {
+    position: relative;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item:hover .service-text * {
+    color: #FFFFFF !important;
+}
+
+
+/*** Appointment ***/
+.appointment {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+
+
+  
+
+
+
+
+/*** Footer ***/
+.footer {
+    color: #999999;
+}
+.footer-text{
+    color: white;
+}
+#footer-text{
+    color: white;
+}
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #999999;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #999999;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--light);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+#img {
+    width: 100%;
+    height: 70vh;
+    border: 8px solid var(--primary);
+    transition: .5s;
+  }
+  
+  #img:hover {
+    width: 100%;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  
+  #img::before {
+    position: absolute;
+    left: -31px;
+    top: -30px;
+    width: 90%;
+    height: 92%;
+    z-index: -1;
+    content: '';
+    background-color: var(--primary);
+    transition: .5s;
+  }
+  
+  #img::after {
+    position: absolute;
+    right: -31px;
+    bottom: -30px;
+    width: 90%;
+    height: 92%;
+    z-index: -1;
+    content: '';
+    background-color: var(--primary);
+    transition: .5s;
+  }
+
+/**mobile and devices responsiveness**/
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 25px;
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    background: rgba(0, 0, 0, .65);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--dark);
+    border: 15px solid var(--dark);
+    border-radius: 50px;
+}
+
+.carousel-caption .breadcrumb-item+.breadcrumb-item::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 85vh;
+    }
+    .navbar{
+        padding: 0px;
+        margin: 0;
+       
+    }
+    .m-0{
+        font-size: 15px;
+    }
+    .carousel-caption .container{
+        margin-top: 90px;
+    }
+   
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-size: contain;
+    }
+    #header-carousel h6{
+        font-size: 12px;
+
+    }
+    #header-carousel h1{
+        font-size: 22px;
+        opacity: 0.5;
+    }
+    #header-carousel ol>li{
+        font-size: 9px;
+    }
+      /* Reduce the size of the box */
+    #responsive-box {
+        width: 120px;  /* Smaller width */
+        height: 50vh; /* Smaller height */
+      }
+      
+      /* Reduce the padding and font size of the content */
+      #responsive-content {
+        padding: 0.5rem; /* Reduce padding */
+      }
+  
+      #responsive-content h1 {
+        font-size: 40px; /* Smaller number size */
+       
+      }
+      
+      #responsive-content h2 {
+        font-size: 16px; /* Smaller "Years" text */
+
+      }
+      
+      #responsive-content h5 {
+        font-size: 13px; /* Smaller "Experience" text */
+      }
+      .custom-dropdown{
+        width: 70vw;
+      }
+
+
+ 
+
+    
+
+}
+@media (max-width: 400px) {
+     /* Further reduce the size of the box for smaller screens */
+     #responsive-box {
+        width: 90px;  /* Even smaller width */
+        height: 50vh; /* Even smaller height */
+      }
+  
+      /* Further reduce padding */
+      #responsive-content {
+        padding: 0.5rem;
+      }
+  
+      /* Further reduce font sizes */
+      #responsive-content h1 {
+        font-size: 45px;  /* Even smaller number size */
+      }
+      
+      #responsive-content h2 {
+        font-size: 15px;  /* Even smaller "Years" text */
+      }
+      
+      #responsive-content h5 {
+        font-size: 12px;  /* Even smaller "Experience" text */
+      }
+      .custom-dropdown{
+        width: 70vw;
+      }
+      .services-section {
+        margin-top: -50% !important; /* Removes extra space on mobile */
+        margin-bottom: 0 !important;
+    }
+    .services-section .row {
+        padding-top: 0 !important;  /* Remove top padding */
+        padding-bottom: 0 !important; /* Remove bottom padding */
+    }
+    .facts-overlay h1 {
+        font-size: 2.5rem; /* Adjust font size on mobile */
+    }
+    .banner{
+        margin-top: -40% !important; /* Removes extra space on mobile */
+        margin-bottom: 0 !important;
+
+    }
+    .funding{
+        margin-top: -20% !important; /* Removes extra space on mobile */
+        margin-bottom: 0 !important;
+    }
+    #img{
+        height: 30vh;
+    }
+      
+  }
