@@ -294,7 +294,9 @@ a:hover{
 #contact{
   margin-top: -1% !important;
 }
-
+.map{
+margin-top: -5% !important;
+}
 
   /**======MOBILE RESPONSIVENESS=============**/
   @media (max-width: 768px) {
@@ -410,6 +412,8 @@ a:hover{
   #footer{
     margin-top: 23% !important;
   }
-  
+  .map{
+    margin-top: -20% !important;
+    }
   }
   
