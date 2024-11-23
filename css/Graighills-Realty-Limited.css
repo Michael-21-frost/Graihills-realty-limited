@@ -297,7 +297,10 @@ a:hover{
 .map{
 margin-top: -5% !important;
 }
-
+.appointment {
+  background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/banner-02.jpg) center center no-repeat !important;
+  background-size: cover;
+}
   /**======MOBILE RESPONSIVENESS=============**/
   @media (max-width: 768px) {
     #header-carousel .carousel-item {
